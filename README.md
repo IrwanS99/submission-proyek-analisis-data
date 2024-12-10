@@ -1,5 +1,8 @@
 # Submission Proyek Analisis Data
 
+# Preview
+Dashboard Streamlit Preview (https://raw.githubusercontent.com/IrwanS99/submission-proyek-analisis-data/d1c859f558774aa117990ebd2e15cf8a253235bd/hasil-analisa.png)
+
 ## Deskripsi
 Proyek ini dirancang untuk menganalisis dataset penyewaan sepeda. Tujuan utamanya adalah menghasilkan wawasan dan informasi berharga dari hasil analisis data tersebut.
 
@@ -25,6 +28,7 @@ notebook.ipynb: File yang digunakan untuk melakukan proses analisis data.
     cd submission-proyek-analisis-data/dashboard/
     python -m streamlit run dashboard.py
     ```
+  anda juga dapat mengunjungi link ini (https://dashboardpy-submissionpy.streamlit.app/)
 
 ## Kontribusi
 Anda dapat berkontribusi pada proyek ini dengan melakukan pull request. Pastikan untuk menjelaskan perubahan yang Anda usulkan secara jelas dan menyeluruh.
