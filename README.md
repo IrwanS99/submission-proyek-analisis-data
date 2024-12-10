@@ -9,7 +9,7 @@ Proyek ini dirancang untuk menganalisis dataset penyewaan sepeda. Tujuan utamany
 notebook.ipynb: File yang digunakan untuk melakukan proses analisis data.
 
 ## Instalasi
-1. Clone repository ini ke komputer lokal Anda menggunakan perintah berikut:
+1. Clone repository ini ke komputer lokal Anda menggunakan perintah berikut:    
    git clone https://github.com/IrwanS99/submission-proyek-analisis-data.git
 
 2. Pastikan Anda memiliki lingkungan Python yang sesuai dan pustaka-pustaka yang diperlukan. Anda dapat menginstal pustaka-pustaka tersebut dengan menjalankan perintah berikut:
