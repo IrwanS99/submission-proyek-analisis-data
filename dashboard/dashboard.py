@@ -40,18 +40,19 @@ hours_df["dteday"] = pd.to_datetime(hours_df["dteday"])
 min_date_days = days_df["dteday"].min()
 max_date_days = days_df["dteday"].max()
 
-# Header
-st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/00_2141_Bicycle-sharing_systems_-_Sweden.jpg/1599px-00_2141_Bicycle-sharing_systems_-_Sweden.jpg", caption="Bike Sharing Insights")
-st.header('📊 **Dashboard Bike Sharing Insights**')
-
-# Filter Data
-st.subheader("📅 **Filter Data Berdasarkan Rentang Waktu**")
-start_date, end_date = st.date_input(
-    label='Rentang Waktu',
-    min_value=min_date_days,
-    max_value=max_date_days,
-    value=[min_date_days, max_date_days]
-)
+# Sidebar
+with st.sidebar:
+    st.image("https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/00_2141_Bicycle-sharing_systems_-_Sweden.jpg/1599px-00_2141_Bicycle-sharing_systems_-_Sweden.jpg", caption="Bike Sharing Insights")
+    st.write("""
+    ## 📅 Filter Data Berdasarkan Rentang Waktu
+    Pilih rentang waktu untuk menganalisis data penyewaan sepeda.
+    """)
+    start_date, end_date = st.date_input(
+        label='Rentang Waktu',
+        min_value=min_date_days,
+        max_value=max_date_days,
+        value=[min_date_days, max_date_days]
+    )
 
 # Filter Data
 main_df_days = days_df[(days_df["dteday"] >= str(start_date)) & 
@@ -65,6 +66,9 @@ reg_df = total_registered_df(main_df_days)
 cas_df = total_casual_df(main_df_days)
 sum_order_items_df = sum_order(main_df_hour)
 season_df = macem_season(main_df_days)
+
+# Dashboard Header
+st.header('📊 **Dashboard Bike Sharing Insights**')
 
 # Statistik Harian
 st.subheader('🚴‍♂️ **Statistik Harian**')
