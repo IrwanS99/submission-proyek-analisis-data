@@ -29,8 +29,8 @@ def macem_season(day_df):
     return day_df.groupby(by="season").count_cr.sum().reset_index()
 
 # Membaca Dataset
-days_df = pd.read_csv("day1.csv")
-hours_df = pd.read_csv("hour1.csv")
+days_df = pd.read_csv("dashboard/day1.csv")
+hours_df = pd.read_csv("dashboard/hour1.csv")
 
 # Mengolah Data
 datetime_columns = ["dteday"]
